@@ -11,13 +11,17 @@
 }
 
 body {
+    text-shadow: 0 5px 5px #ccc;
     height: 100%;
     color: var(--txt-color);
-    /* font-family: 'Poppins', sans-serif; */
     font-family: cursive;
 }
 
 .fireworks-container {
+	-webkit-animation: bg-pan-tl 15s linear infinite both;
+	        animation: bg-pan-tl 15s linear infinite both;
+            transition: 0.5s linear;
+
     position: fixed;
     left: 0;
     top: 0;
@@ -28,6 +32,24 @@ body {
     background-repeat: no-repeat;
 }
 
+@-webkit-keyframes bg-pan-tl {
+    0% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  @keyframes bg-pan-tl {
+    0% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  
 .content-wrapper {
     z-index: 99;
     position: absolute;
@@ -49,7 +71,6 @@ body {
 .year {
     font-size: 14rem;
     font-weight: 900;
-    /* line-height: 1.5; */
 }
 
 .timer {
@@ -63,6 +84,8 @@ body {
 }
 
 .timer-box {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1),
+    inset 0 0 10px #000;
     border-radius: 30px;
     background-color: var(--timer-box-bg);
 }
@@ -83,6 +106,8 @@ body {
 .timer-box__text {
     display: grid;
     place-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1),
+    inset 0 0 10px #000;
     background-color: var(--timer-box-txt-bg);
     border-radius: 30px;
     padding: 1rem 0;
