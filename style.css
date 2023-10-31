@@ -14,7 +14,7 @@ body {
     text-shadow: 0 5px 5px #ccc;
     height: 100%;
     color: var(--txt-color);
-    font-family: cursive;
+    font-family: cursive ,'poppins';
 }
 
 .fireworks-container {
@@ -123,8 +123,20 @@ body {
 
 @media only screen and (max-width: 700px) {
     html {
-        font-size: 40%;
+        font-size: 30%;
+        
     }
+    .header{
+        margin-top: -80px;
+        font-size: 20px;
+    }
+    .year{
+        margin-top: 40px;
+    }
+    .timer{
+        margin-top: 30px;
+    }
+   
 }
 @media only screen and (max-width: 280px){
     html{
